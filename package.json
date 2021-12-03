@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TylerMcCullough/Light-Bodies-NFT/issues"
   },
-  "homepage": "https://github.com/TylerMcCullough/Light-Bodies-NFT#readme"
+  "homepage": "https://github.com/TylerMcCullough/Light-Bodies-NFT#readme",
+  "dependencies": {
+    "@imtbl/imx-contracts": "^1.0.0"
+  }
 }
