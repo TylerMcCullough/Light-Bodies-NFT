@@ -25,10 +25,10 @@ module.exports = {
     }
   },
   paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
+    sources: "../contracts",
+    tests: "../test",
+    cache: "../cache",
+    artifacts: "../artifacts"
   },
   mocha: {
     timeout: 20000
