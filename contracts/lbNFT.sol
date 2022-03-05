@@ -222,24 +222,21 @@ contract NativeMetaTransaction is EIP712Base {
 }
 
 
-contract lightBodiesNFT is ERC721URIStorage, Ownable, ContextMixin, NativeMetaTransaction {
+contract LightBodiesNFT is ERC721URIStorage, Ownable, ContextMixin, NativeMetaTransaction {
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
     constructor() public ERC721("lightBodiesNFT", "NFT") {}
 
-    function mintNFT(address recipient, string memory tokenURI)
+    function mintNFT(address recipient, string memory tokenURI, uint newTokenId)
         public onlyOwner
         returns (uint256)
     {
-        _tokenIds.increment();
+        _mint(recipient, newTokenId);
+        _setTokenURI(newTokenId, tokenURI);
 
-        uint256 newItemId = _tokenIds.current();
-        _mint(recipient, newItemId);
-        _setTokenURI(newItemId, tokenURI);
-
-        return newItemId;
+        return newTokenId;
     }
 
     function baseTokenURI() public view returns (string memory) {

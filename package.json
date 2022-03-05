@@ -1,5 +1,5 @@
 {
-  "name": "lightBodies-nft",
+  "name": "light-bodies-nft",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,19 +10,18 @@
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "ethers": "^5.5.1",
+    "ethers": "^5.5.4",
     "hardhat": "^2.6.7"
   },
   "dependencies": {
+    "@0x/subproviders": "^6.6.3",
+    "@0xproject/types": "^1.1.4",
     "@alch/alchemy-web3": "^1.1.7",
     "@openzeppelin/contracts": "^4.3.2",
     "axios": "^0.24.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "form-data": "^4.0.0",
-    "multer": "^1.4.3",
-    "nodemon": "^2.0.15",
-    "opensea-js": "^1.2.7",
-    "web3": "^1.6.1"
+    "opensea-js": "^1.2.8",
+    "web3": "^1.7.0"
   }
 }
