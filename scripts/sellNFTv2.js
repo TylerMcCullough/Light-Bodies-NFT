@@ -22,7 +22,6 @@ const mnemonicWalletSubprovider = new MnemonicWalletSubprovider({
   mnemonic: MNEMONIC,
   baseDerivationPath: BASE_DERIVATION_PATH,
 })
-console.log(mnemonicWalletSubprovider)
 const infuraRpcSubprovider = new RPCSubprovider({
   rpcUrl: INFURA_KEY,
 })
@@ -38,13 +37,13 @@ const seaport = new OpenSeaPort(
     {
       networkName:
       NETWORK === 'mainnet' || NETWORK === 'live'
-        ? Network.Main
-        : Network.Rinkeby,
+        ? Network.Matic
+        : Network.Mumbai,
       apiKey: OPENSEA_KEY,
-    },
-    (arg) => console.log(arg)
+    }
   );
 
+console.log(seaport)
 const sellNFT = async (token, tokenAdd) => {
     console.log("Auctioning an item for a fixed price...");
     const fixedPriceSellOrder = await seaport.createSellOrder({
